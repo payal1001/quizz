@@ -35,7 +35,7 @@ label {
 }
 
 input[type="submit"] {
-	background-color: #090000;
+	background-color: #cb6969;
 	color: #fff;
 	border: none;
 	padding: 10px 20px;
@@ -82,7 +82,7 @@ span.incorrect {
 .hhhh{
     font-size: 40px;
     font-family: sans-serif;
-    color: rgb(255, 221, 152);
+    color: #cb6969;
     
 }
 .preloader {

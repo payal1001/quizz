@@ -9,6 +9,7 @@ const q2Correct = document.createElement('span');
 const q3Correct = document.createElement('span');
 const q4Correct = document.createElement('span');
 const q5Correct = document.createElement('span');
+const scoreDisplay = document.querySelector('#score');
 /**const timeDisplay = document.querySelector('#time');**/
 const preloader=document.querySelector(".preloader");
 
@@ -75,10 +76,13 @@ form.addEventListener('submit', function(event) {
     const q5Value = document.querySelector('input[name="q5"]:checked').value;
     const q3Value = document.querySelector('input[name="q3"]:checked').value;
 
+	let score = 0;
+
 
 	if (q1Value === 'a') {
 		q1Result.textContent = 'Correct!';
 		q1Result.classList.add('correct');
+		score++;
 	} else {
 		q1Result.textContent = 'Incorrect. The correct answer is:';
 		q1Result.classList.add('incorrect');
@@ -88,6 +92,7 @@ form.addEventListener('submit', function(event) {
 	if (q2Value === 'c') {
 		q2Result.textContent = 'Correct!';
 		q2Result.classList.add('correct');
+		score++;
 	} else {
 		q2Result.textContent = 'Incorrect. The correct answer is:';
 		q2Result.classList.add('incorrect');
@@ -97,6 +102,7 @@ form.addEventListener('submit', function(event) {
     if (q3Value === 'b') {
 		q3Result.textContent = 'Correct!';
 		q3Result.classList.add('correct');
+		score++;
 	} else {
 		q3Result.textContent = 'Incorrect. The correct answer is:';
 		q3Result.classList.add('incorrect');
@@ -107,6 +113,7 @@ form.addEventListener('submit', function(event) {
     if (q4Value === 'b') {
 		q4Result.textContent = 'Correct!';
 		q4Result.classList.add('correct');
+		score++;
 	} else {
 		q4Result.textContent = 'Incorrect. The correct answer is:';
 		q4Result.classList.add('incorrect');
@@ -117,15 +124,41 @@ form.addEventListener('submit', function(event) {
     if (q5Value === 'c') {
 		q5Result.textContent = 'Correct!';
 		q5Result.classList.add('correct');
+		score++;
 	} else {
 		q5Result.textContent = 'Incorrect. The correct answer is:';
 		q5Result.classList.add('incorrect');
 		q5Result.appendChild(q5Correct);
 	}
+	document.getElementById("score").innerText="your score is: " + score;
 
 	// disable the radio buttons after submitting the form
 	const radioButtons = document.querySelectorAll('input[type="radio"]');
 	radioButtons.forEach(function(radioButton) {
 		radioButton.disabled = true;
 	});
+
 });
+
+
+/**let score = 0;
+	document.getElementById("quiz-form").addEventListener("submit",function(event){
+		event.preventDefault();
+		if(q1==="correct"){
+			scorer++;
+		}
+		if(q2==="correct"){
+			scorer++;
+		}
+		if(q3==="correct"){
+			scorer++;
+		}
+		if(q4==="correct"){
+			scorer++;
+		}
+		if(q5==="correct"){
+			scorer++;
+		}
+
+	document.getElementById("score").innerText="your score is: " + score;
+	});**/

@@ -94,7 +94,7 @@ form.addEventListener('submit', function(event) {
 		q2Result.appendChild(q2Correct);
 	}
 
-    if (q3Value === 'c') {
+    if (q3Value === 'a') {
 		q3Result.textContent = 'Correct!';
 		q3Result.classList.add('correct');
 	} else {

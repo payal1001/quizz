@@ -169,11 +169,12 @@ span.incorrect {
 	
     
 }
-#container {
+.container {
     display: grid;
     align-items: center; 
-    grid-template-columns: auto auto ;
+    grid-template-columns: auto auto;
     column-gap: 5px;
+	
    }
    img{
     max-width: 450px;
@@ -203,3 +204,4 @@ span.incorrect {
     height: 498px;
   }
    
+  
